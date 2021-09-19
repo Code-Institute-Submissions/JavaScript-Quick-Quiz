@@ -1,50 +1,38 @@
-function runQuiz() {
-    let questions = document.getElementById('quest-text');
+let start = document.getElementById('start-button');
+let next = document.getElementById('nextQuest-button');
+let questionsContainer = document.getElementById('question-container');
+let quest = document.getElementById('quests');
+
+
+start.addEventListener('click', startQuiz);
+next.addEventListener('click', nextQuestion);
+
+function startQuiz() {
+  console.log('logged');
+
 }
 
-let quest = [
-    {
-      question: "Inside which HTML element do we put the JavaScript?",
-      answers: [
-        {option:"<script>"}, // Correct answer
-        {option:"<scripting>"},
-        {option:"<js>"}
-      ]
-    },
+function nextQuestion() {
+  
+}
 
-    {
-      question: "Where is the correct place to insert a JavaScript?",
-      answers: [
-        {option:"The <body> section"},
-        {option:"The <head> section"},
-        {option:"Both the <head> section and the <body> section are correct"} // Correct answer
-      ]
-    },
+function showQuest() {
 
-    {
-      question: "What is the correct syntax for referring to an external script called 'xxx.js'?",
-      answers: [
-        {option:'<script src="xxx.js">'}, //Correct answer
-        {option:'<script name="xxx.js">'},
-        {option:'<script href="xxx.js">'}
-      ]
-    },
+}
 
-    {
-      question: 'How do you write "Hello World" in an alert box?',
-      answers: [
-        {option:'msgBox("Hello World");'},
-        {option:'alert("Hello World");'}, // Correct answer
-        {option:'msg("Hello World");'},
-      ]
-    },
+function answers() {
 
-    {
-      question: "How do you create a function in JavaScript?",
-      answers: [
-        {option:"function = myFunction()"},
-        {option:"function:myFunction()"},
-        {option:"function myFunction()"}, //Correct answer
-      ]
-    },
-  ]
+}
+
+const quests = [
+  {
+    question: 'Inside which HTML element do we put the JavaScript?',
+    answers: [
+       {text: '<script>', correct: true},    //Correct answer  
+       {text: '<js>', correct: false},
+       {text: '<javascript>', correct: false},
+       {text:'<scripting>', correct: false}
+    ]
+  },
+ 
+]
